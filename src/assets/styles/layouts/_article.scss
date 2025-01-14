@@ -1,0 +1,135 @@
+.article-container{
+  width: 100vw;
+
+  article {
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 1.6;
+    container-type: inline-size;
+
+    :is(h1, h2, h3) {
+      font-family: $font-title;
+      color: $main;
+      text-align: center;
+    }
+  
+    header {
+      padding: 10px;
+      margin-bottom: 24px;
+      text-align: center;
+
+      figure img{
+        max-width: 300px;
+        height: auto;
+      }
+  
+      .article-title {
+        margin-bottom: 8px;
+        font-size: 2.5rem;
+      }
+  
+      .article-subtitle {
+        font-size: 1.25rem;
+        color: $highlight;
+      }
+    }
+
+    section, footer{
+      max-width: 50%;
+      margin: auto;
+      font-size: 1em;
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 0px;
+
+      li {
+        margin-bottom: 8px;
+        list-style: none;
+      }
+    }
+
+    footer ul{
+      padding: 8px;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient-function();
+      border: 2px solid $highlight; 
+    }
+    
+    section:not(:has(ul)):not(:has(blockquote)){
+      display: flex;
+      flex-direction: row;
+
+      p:first-child {
+        min-width: 200px;
+        margin-right: 16px;
+        font-size: 1.2em;
+        font-weight: bold; 
+      }
+    }
+
+    :is(p, ul, blockquote){
+      margin: 16px 0;
+    }
+    
+
+    blockquote {
+      padding-left: 16px;
+      font-style: italic;
+      color: $main;
+      border-left: 4px solid $highlight;
+
+      span {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.9rem;
+        color: $main;
+      }
+    }
+
+    section figure {
+      width: 80%;
+      height: auto;
+      margin: 24px auto;
+      text-align: center;
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      figcaption {
+        margin-top: 8px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    }
+
+    @container(max-width:1180px){
+      section:not(:has(ul)):not(:has(blockquote)){
+        flex-direction: column;
+      }
+    }
+
+    @container(max-width:800px){
+      section, footer{
+        max-width: 70%;
+      }
+
+    }
+
+    @container(max-width:400px){
+      header{
+        margin: 0px;
+
+        figure img{
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}  

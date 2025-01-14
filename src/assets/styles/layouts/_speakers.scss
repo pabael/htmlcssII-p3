@@ -1,0 +1,65 @@
+@layer base, typography, layout, card, media;
+
+@layer base {
+  .speakers-container {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@layer typography {
+  .speakers-container h1 {
+    margin: 20px;
+    font-family: $font-title;
+    color: $main;
+  }
+}
+
+@layer layout {
+  .speakers-container .speakers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    width: 90vw;
+    padding: 0;
+    margin-top: 20px;
+    container-type: inline-size;
+  }
+}
+
+@layer card {
+  .speakers-container .speakers-list .speaker {
+    flex: 1 1 calc(33.333% - 32px);
+    flex-grow: 1;
+    min-width: 300px;
+    text-align: center;
+    list-style: none;
+
+    .card {
+      width: 100%;
+      height: 100%;
+
+      i {
+        color: $main;
+      }
+    }
+
+    .card:hover {
+      border-color: $highlight;
+    }
+  }
+}
+
+@layer media {
+  @container(max-width: 400px) {
+    .speakers-container .speakers-list .speaker {
+      flex: none;
+      width: 80%;
+      min-width: min-content;
+    }
+  }
+}
