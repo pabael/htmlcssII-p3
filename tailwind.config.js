@@ -6,9 +6,7 @@ module.exports = {
       colors: {
         'main': '#014452',
         'highlight': '#1e7268',
-        'background': '#c6e8ee',
-        'card-bg': '#c6e8ee',
-        'primary': 'hwb(220 30% 20%)',
+        'background': '#c6e8ee'
       },
       fontFamily: {
         sans: [
