@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 800px) {
-  .article-container section {
+  .article-container section,  .article-container footer{
     @apply max-w-[70%];
   }
 }
