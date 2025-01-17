@@ -6,10 +6,20 @@
   @apply mb-2;
 }
 
+.article-container footer li{
+  @apply text-white;
+}
+
 .article-container section figure {
   @apply w-[80%] h-auto my-6 mx-auto text-center;
 }
 
 .article-container section h2 {
   @apply text-center text-main font-title text-[2rem] font-medium mb-4;
+}
+
+@media (max-width: 800px) {
+  .article-container section {
+    @apply max-w-[70%];
+  }
 }
