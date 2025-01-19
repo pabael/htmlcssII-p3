@@ -13,3 +13,15 @@
 .card:hover {
   @apply border-2 border-highlight;
 }
+
+.card h5{
+  @apply mt-4 text-xl font-semibold;
+}
+
+.card .p1{
+  @apply font-bold mt-2;
+}
+
+.card .p2{
+  @apply text-muted mt-2;
+}
